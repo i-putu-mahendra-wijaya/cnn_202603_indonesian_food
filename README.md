@@ -320,7 +320,7 @@ If you want the smoothest local setup:
 3. run `poetry install`
 4. create Kaggle API credentials
 5. register the Jupyter kernel
-6. open `pekerja_sejahtera.ipynb` and run all cells in order
+6. open `indonesian_food.ipynb` and run all cells in order
 
 ## License
 
