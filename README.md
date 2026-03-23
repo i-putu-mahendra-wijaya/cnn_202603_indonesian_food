@@ -148,12 +148,12 @@ poetry run python --version
 This makes the Poetry environment appear as a notebook kernel.
 
 ```bash
-poetry run python -m ipykernel install --user --name pekerja-sejahtera --display-name "Python (pekerja-sejahtera)"
+poetry run python -m ipykernel install --user --name indonesoan-food --display-name "Python (indonesian-food)"
 ```
 
 After that, open the notebook and select the kernel:
 
-`Python (pekerja-sejahtera)`
+`Python (indonesoan-food)`
 
 ## 7. Set Up Kaggle Authentication
 
@@ -211,7 +211,7 @@ poetry run jupyter lab
 
 Then open:
 
-`pekerja_sejahtera.ipynb`
+`indonesian_food.ipynb`
 
 Run the cells from top to bottom.
 
@@ -228,7 +228,7 @@ What the notebook does:
 
 The notebook uses the Kaggle dataset:
 
-- https://www.kaggle.com/datasets/rezkyyayang/pekerja-sejahtera
+- https://www.kaggle.com/datasets/rizkyyk/dataset-food-classification
 
 When first run:
 
@@ -308,7 +308,7 @@ Make sure you are using Python `3.12.x`. Installing a different Python version m
 Run the kernel registration command again:
 
 ```bash
-poetry run python -m ipykernel install --user --name pekerja-sejahtera --display-name "Python (pekerja-sejahtera)"
+poetry run python -m ipykernel install --user --name indonesian-food --display-name "Python (indonesian-food)"
 ```
 
 ## Suggested Setup for Students
