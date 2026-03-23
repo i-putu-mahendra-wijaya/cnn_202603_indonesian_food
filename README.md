@@ -233,11 +233,11 @@ The notebook uses the Kaggle dataset:
 When first run:
 
 - the dataset is downloaded through `kagglehub`,
-- CSV files are copied into the local `dataset/` folder.
+- JPG files are copied into the local `dataset/` folder.
 
 On later runs:
 
-- if CSV files already exist in `dataset/`, the notebook reuses them and skips downloading again.
+- if JPG files already exist in `dataset/`, the notebook reuses them and skips downloading again.
 
 ## GPU Notes
 
