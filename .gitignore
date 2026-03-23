@@ -9,6 +9,10 @@
 **/*.jpg
 **/*.gif
 
+# Model
+**/*.h5
+**/*.keras
+
 # Dependencies
 **/node_modules/
 **/.pnp
