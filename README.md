@@ -2,15 +2,16 @@
 
 Simple CNN project for the BINUS course **Deep Learning and Its Application**.
 
-This repository contains a Jupyter notebook that:
+This repository contains Jupyter notebooks that:
 
 - downloads the `rizkyyk/dataset-food-classification` dataset from Kaggle,
 - performs exploratory analysis and preprocessing,
-- trains a simple Convolutional Neural Network (CNN) with TensorFlow.
+- trains a custom Convolutional Neural Network (CNN) and a VGG16-based transfer learning model with TensorFlow.
 
 ## Project Contents
 
 - `indonesian_food.ipynb`: main notebook for the project
+- `indonesian_food_question.ipynb`: question-and-answer notebook for the same dataset
 - `pyproject.toml`: Python dependencies managed with Poetry
 - `poetry.lock`: locked dependency versions
 - `dataset/`: local cache for downloaded image files
@@ -148,12 +149,12 @@ poetry run python --version
 This makes the Poetry environment appear as a notebook kernel.
 
 ```bash
-poetry run python -m ipykernel install --user --name indonesoan-food --display-name "Python (indonesian-food)"
+poetry run python -m ipykernel install --user --name indonesian-food --display-name "Python (indonesian-food)"
 ```
 
 After that, open the notebook and select the kernel:
 
-`Python (indonesoan-food)`
+`Python (indonesian-food)`
 
 ## 7. Set Up Kaggle Authentication
 
@@ -220,9 +221,10 @@ What the notebook does:
 1. checks available CPU/GPU devices,
 2. authenticates with Kaggle,
 3. downloads the dataset if needed,
-4. copies CSV files into the local `dataset/` folder,
-5. loads and analyzes the data,
-6. trains the MLP model.
+4. copies the dataset image folders into the local `dataset/` folder,
+5. loads and analyzes the image data,
+6. trains a custom CNN model,
+7. trains a VGG16-based transfer learning model.
 
 ## Dataset Behavior
 
@@ -233,11 +235,11 @@ The notebook uses the Kaggle dataset:
 When first run:
 
 - the dataset is downloaded through `kagglehub`,
-- JPG files are copied into the local `dataset/` folder.
+- the `dataset_gambar` image folders are copied into the local `dataset/` folder.
 
 On later runs:
 
-- if JPG files already exist in `dataset/`, the notebook reuses them and skips downloading again.
+- if JPG files already exist in `dataset/`, the notebook reuses the local dataset and skips downloading again.
 
 ## GPU Notes
 
@@ -252,6 +254,12 @@ You can verify device detection by running the first notebook cells.
 The project installs standard TensorFlow for Linux. GPU support depends on your local CUDA/cuDNN setup and is not configured automatically by this repository.
 
 If TensorFlow does not detect a GPU, the notebook will still run on CPU.
+
+## Pretrained Weights Note
+
+The VGG16 section uses ImageNet pretrained weights.
+
+On the first run of that section, TensorFlow may download the pretrained weights automatically if they are not already cached on your machine.
 
 ## Common Commands
 
@@ -311,7 +319,7 @@ Run the kernel registration command again:
 poetry run python -m ipykernel install --user --name indonesian-food --display-name "Python (indonesian-food)"
 ```
 
-## Suggested Setup for Students
+## Suggested Setup
 
 If you want the smoothest local setup:
 
